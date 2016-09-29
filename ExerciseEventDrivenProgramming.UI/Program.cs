@@ -1,15 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace ExerciseEventDrivenProgramming.UI
+namespace ExerciseEventDrivenProgramming
 {
-    class Program
+
+    #region Using
+
+    using System;
+
+    #endregion
+
+
+    #region Delegates
+
+    public delegate void NameEventHandler(object sender, NameEventArgs e); 
+    
+    #endregion
+
+    public class Program
     {
-        static void Main(string[] args)
+
+        public static event NameEventHandler Name;
+
+        public static void Main(string[] args)
         {
-        }
+            #region Console
+
+            Console.Write("What is your name? ");
+            OnName(new NameEventArgs(Console.ReadLine()));
+
+            Console.WriteLine(Name);
+            Console.ReadKey();
+
+            #endregion
+
+            void OnName(NameEventArgs e)
+            {
+                Name?.Invoke(this, e);
+            }
+    }
+
+        
     }
 }

@@ -49,6 +49,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExerciseEventDrivenProgramming.Ent\ExerciseEventDrivenProgramming.Ent.csproj">
+      <Project>{2481291c-e65b-446b-986b-d73c0b394125}</Project>
+      <Name>ExerciseEventDrivenProgramming.Ent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
