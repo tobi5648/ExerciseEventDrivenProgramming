@@ -33,7 +33,7 @@ namespace ExerciseEventDrivenProgramming
 
             #endregion
 
-            void OnName(NameEventArgs e)
+            public void OnName(NameEventArgs e)
             {
                 Name?.Invoke(this, e);
             }
